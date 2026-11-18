@@ -1,0 +1,16 @@
+{
+  "name": "sso-google-demo",
+  "version": "1.0.0",
+  "description": "SSO demo: two apps using Google as the identity provider (OpenID Connect)",
+  "main": "app.js",
+  "scripts": {
+    "app-a": "node app.js 3000 \"Jira (App A)\"",
+    "app-b": "node app.js 4000 \"Wiki (App B)\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "google-auth-library": "^9.14.0"
+  }
+}
