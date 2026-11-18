@@ -30,12 +30,3 @@ npm run app-b             # terminal 2 -> http://localhost:4000
 3. Show the ID token claims on the page (`iss`, `sub`, `email`...). The app trusts
    them because it verified Google's signature.
 
-## Flow
-```
-User ──> App A /login ──redirect──> Google (login once)
-                                       │
-App A /auth/callback <──code──────────┘
-App A ──code + secret──> Google token endpoint ──> ID token (JWT)
-App A verifies JWT signature ──> creates local session
-```
-`state` protects against CSRF and `nonce` protects against token replay.
